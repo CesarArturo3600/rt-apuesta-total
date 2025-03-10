@@ -1,0 +1,28 @@
+# Node.js
+node_modules/
+dist/
+.vite/
+.vscode/
+.idea/
+
+# Archivos generados
+*.log
+*.lock
+yarn-error.log
+npm-debug.log
+pnpm-lock.yaml
+package-lock.json
+
+# Configuración de TypeScript/Vite que se genera automáticamente
+**/vite-env.d.ts
+
+# Variables de entorno
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+
+# Caché de herramientas
+.cache/
+.DS_Store
