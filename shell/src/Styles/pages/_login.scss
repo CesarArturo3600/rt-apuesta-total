@@ -63,6 +63,16 @@
       background-color: #2557ad;
     }
   }
+  &.theme {
+    &-light {
+      background-color: #fff;
+      color: black;
+    }
+    &-dark {
+      background-color: black;
+      color: #fff;
+    }
+  }
 }
 
 @media (max-width: 700px) {
