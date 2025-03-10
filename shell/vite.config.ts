@@ -25,6 +25,7 @@ export default defineConfig({
       "@assets": path.resolve(__dirname, "./src/assets"),
       "@routes": path.resolve(__dirname, "./src/Routes"),
       "@styles": path.resolve(__dirname, "./src/Styles"),
+      "@utils": path.resolve(__dirname, "./src/utils"),
     },
   },
   build: {

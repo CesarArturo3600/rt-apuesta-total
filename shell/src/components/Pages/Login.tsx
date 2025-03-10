@@ -1,5 +1,6 @@
 import logo from "@assets/pokelogo.png";
 import { SetStateAction, useState } from "react";
+import { NavLink } from "react-router-dom";
 
 interface onChangeThemeProps {
   target: { value: SetStateAction<string> };
@@ -35,7 +36,9 @@ const Login: React.FC = () => {
             <label htmlFor="">user:</label>
             <input className="login-form__user" type="text" />
           </div>
-          <button className="login-form__button">Ingresar</button>
+          <NavLink to="/finder">
+            <button className="login-form__button">Ingresar</button>
+          </NavLink>
         </form>
       </div>
     </div>
