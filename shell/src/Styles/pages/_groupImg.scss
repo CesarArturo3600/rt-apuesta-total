@@ -1,0 +1,19 @@
+.carousel {
+  width: 100%;
+  max-width: 700px;
+  &--container {
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+  }
+  &-group {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    &--item {
+      width: 400px;
+      height: 300px;
+    }
+  }
+}
