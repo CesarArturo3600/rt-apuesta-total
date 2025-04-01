@@ -15,10 +15,12 @@ const Carousel: React.FC<CarouselProps> = ({
   slidesToScroll = 1,
   slides = [],
 }) => {
+  console.log("🚀 ~ slides:", slides);
   const [imagesLoaded, setImagesLoaded] = useState<boolean>(false);
   const [loadedCount, setLoadedCount] = useState<number>(0);
 
   const [processedSlides, setProcessedSlides] = useState(slides);
+  console.log("🚀 ~ processedSlides:", processedSlides);
 
   const settings = getSettings({
     autoplay,
@@ -35,6 +37,10 @@ const Carousel: React.FC<CarouselProps> = ({
     if (slides.length === 0) return;
 
     const processedSlidesCopy = [...slides];
+    console.log(
+      "🚀 ~ useEffect ~ processedSlidesCopy:::::::::",
+      processedSlidesCopy
+    );
 
     const arrPromises = slides.map((slide, index) => {
       return new Promise<void>((resolve) => {
@@ -102,20 +108,17 @@ const Carousel: React.FC<CarouselProps> = ({
       style={{ margin: "0 auto", maxWidth: "800px" }}
     >
       <Slider {...settings}>
-        {processedSlides.map((slide) => {
+        {processedSlides.map((slide, index) => {
           return (
-            <div key={slide.id} style={{ outline: "none" }}>
+            <div key={index} style={{ outline: "none" }}>
               <img
                 src={slide.image}
-                alt={slide.title}
+                alt={slide.name}
                 style={{ width: "100%", height: "auto", borderRadius: "8px" }}
               />
               <h3 style={{ marginTop: "10px", marginBottom: "5px" }}>
-                {slide.title}
+                {slide.name}
               </h3>
-              {slide.description && (
-                <p style={{ margin: "0" }}>{slide.description}</p>
-              )}
             </div>
           );
         })}

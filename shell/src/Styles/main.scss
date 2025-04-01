@@ -4,4 +4,10 @@
 @use "pages/login" as *;
 @use "pages/groupimg" as *;
 @use "pages/search" as *;
+@use "pages/carousel" as *;
 @use "abstract/responsive" as *;
+
+body {
+  display: flex;
+  justify-content: center;
+}

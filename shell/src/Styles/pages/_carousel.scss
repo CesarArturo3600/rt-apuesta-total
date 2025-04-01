@@ -4,12 +4,13 @@
 .carousel-container {
   margin: 0 auto;
   max-width: 800px;
-  padding: 20px;
+  padding: 20px 40px 60px 40px;
 }
 
 .slick {
   padding: 1rem;
   &-dots {
+    bottom: -35px !important;
     & li {
       & button {
         &:before {
@@ -32,7 +33,7 @@
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    column-gap: 0.6rem;
+    column-gap: 0.6rem !important;
   }
   &-prev {
     @extend %slick-prev-next;
@@ -54,6 +55,21 @@
       @extend %slick-prev-next-hover-before;
     }
   }
+  &-slider {
+    button {
+      width: $buttonTam;
+      height: $buttonTam;
+      &.slick-arrow {
+        font-size: $buttonTam;
+      }
+      &.slick-next {
+        right: calc(($buttonTam/2) * -1);
+      }
+      &.slick-prev {
+        left: calc(($buttonTam/2) * -1);
+      }
+    }
+  }
   &-slide {
     opacity: 0.5;
     transition: opacity 0.3s ease;
@@ -62,6 +78,7 @@
     display: flex;
     height: auto;
     border: 1px solid $color4;
+    width: 100px;
     & div {
       outline: none;
     }
