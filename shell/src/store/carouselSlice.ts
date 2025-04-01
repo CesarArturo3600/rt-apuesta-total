@@ -1,18 +1,13 @@
 import { createSlice } from "@reduxjs/toolkit";
-import pokemonDataSlice from './carouselSlice';
 
 const pokemonDataSlice = createSlice({
-    name:'pokemonsData',
-    initialState:{
-        data:[]
-    },
-    reducers:{
-        setPokemonData:(state,action) => state.data = action.payload
-    }
-})
+  name: "pokemonData",
+  initialState: {
+    data: [],
+  },
+  reducers: {
+    setDataPokemon: (state, action) => (state.data = action.payload),
+  },
+});
 
-
-export {setPokemonData} = pokemonDataSlice.actions
-
-export default pokemonDataSlice.reducer;
-
+const {} = pokemonDataSlice.actions;

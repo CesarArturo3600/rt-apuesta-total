@@ -205,3 +205,17 @@
   margin: 20px auto;
   max-width: 600px;
 }
+
+.search--pokemon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__input {
+    width: 35%;
+    height: 40px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 2px solid #e8e8e8;
+    box-sizing: border-box;
+  }
+}

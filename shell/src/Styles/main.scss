@@ -1,5 +1,7 @@
-@use "abstract/variables";
-@use "base/global";
-@use "pages/login";
-@use "pages/groupimg";
-@use "pages/search";
+@use "abstract/variables" as *;
+@use "abstract/placeholders" as *;
+@use "base/global" as *;
+@use "pages/login" as *;
+@use "pages/groupimg" as *;
+@use "pages/search" as *;
+@use "abstract/responsive" as *;

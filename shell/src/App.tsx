@@ -7,9 +7,6 @@ import { AppRoutes } from "./Routes/AppRoutes";
 function App() {
   return (
     <>
-      {/*     <PokemonDetails /> */}
-      {/*     <PokemonHistory /> */}
-
       <BrowserRouter>
         <AppRoutes />
       </BrowserRouter>

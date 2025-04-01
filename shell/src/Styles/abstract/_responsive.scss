@@ -1,0 +1,12 @@
+@media (max-width: 500px) {
+  .slick {
+    &-slide {
+      & img {
+        max-height: 500px;
+      }
+    }
+  }
+  .carousel-slide {
+    width: 50%;
+  }
+}

@@ -58,6 +58,17 @@ export const pokemonImg = createApi({
   }),
 });
 
+export const pokemonData = createApi({
+  reducerPath: "pokemonData",
+  baseQuery: pokemonInterceptor,
+  endpoints: (builder) => ({
+    getPokemonData: builder.query({
+      query: (pokemonName) => `pokemon/${pokemonName}`,
+    }),
+  }),
+});
+
 export const { useGetPokemonsAllQuery } = pokemonAll;
 export const { useGetPokemonsByAbilitiesQuery } = pokemonsByAbilities;
 export const { useGetPokemonsImgQuery } = pokemonImg;
+export const { useGetPokemonDataQuery } = pokemonData;
