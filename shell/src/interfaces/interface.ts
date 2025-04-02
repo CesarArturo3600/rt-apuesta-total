@@ -61,6 +61,7 @@ export interface PokemonDataFormated {
 //carousel
 // Definimos la interfaz para cada slide
 export interface SlideItem {
+  id?: string;
   image: string;
   name: string;
 }
